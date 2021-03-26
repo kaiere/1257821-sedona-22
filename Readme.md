@@ -1,7 +1,7 @@
 # Личный проект «Седона» 
 
 * Студент: [Olga Chupeykina](https://up.htmlacademy.ru/adaptive/22/user/1257821).
-* Наставник: `Неизвестно`.
+* Наставник: `Artem Ryzhov` (https://htmlacademy.ru/profile/id1387905).
 
 ---
 
