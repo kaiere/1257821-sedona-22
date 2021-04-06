@@ -1,0 +1,35 @@
+.second-reason {
+  background-color: $basic-blue;
+  color: $basic-white;
+}
+
+.second-reason__wrapper {
+  padding: 39px 12px;
+}
+
+.second-reason__header {
+  font-family: "PT Sans Bold", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.second-reason__number,
+.second-reason__text {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.second-reason__image {
+  background-image: url("../img/photo-bridge1.jpg");
+  background-repeat: no-repeat;
+  min-height: 260px;
+}

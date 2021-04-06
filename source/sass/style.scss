@@ -1,1 +1,20 @@
-// Начните писать стили здесь
+// Global
+
+@import "../sass/colors.scss";
+@import "../sass/fonts.scss";
+@import "../sass/global.scss";
+
+// General blocks
+
+@import "../sass/page-header.scss";
+@import "../sass/welcome.scss";
+@import "../sass/footer.scss";
+
+// Blocks (index)
+
+@import "../sass/introduction.scss";
+@import "../sass/first-reason.scss";
+@import "../sass/features.scss";
+@import "../sass/second-reason.scss";
+@import "../sass/last-reasons.scss";
+@import "../sass/hotel-search.scss";
