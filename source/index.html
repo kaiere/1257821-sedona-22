@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -34,14 +35,16 @@
       <section class="welcome">
         <h1 class="visually-hidden">Город Седона</h1> <!--Смысловой заголовок секции, потом скроем-->
         <div class="welcome__text">
-          <img src="img/text-index.svg" width="458" height="352" alt="Добро пожаловать в Седону">
+          <img src="img/text-index.svg" width="282" height="214" alt="Добро пожаловать в Седону">
         </div>
       </section>
 
       <section class="introduction">
         <h2 class="visually-hidden">Почему Седона</h2> <!--Смысловой заголовок секции, потом скроем-->
-        <h3 class="introduction__header">Седона — небольшой<br> городок в Аризоне,<br> заслуживающий большего!</h3>
-        <p class="intoduction__text">Рассмотрим 5 причин, по которым<br> Седона круче, чем гранд каньон!</p>
+        <div class="introduction__wrapper">
+          <h3 class="introduction__header">Седона — небольшой<br> городок в Аризоне,<br> заслуживающий большего!</h3>
+          <p class="introduction__text">Рассмотрим 5 причин, по которым<br> Седона круче, чем гранд каньон!</p>
+        </div>
       </section>
 
       <section class="first-reason">
@@ -110,8 +113,10 @@
       </section>
 
       <section class="hotel-search">
-        <h2 class="hotels-search__header">Заинтересовались?</h2>
-        <p class="hotels-search__text">Укажите предполагаемые даты<br> поездки, и мы покажем вам лучшие<br> предложения гостиниц в Седоне</p>
+        <div class="hotel-search__wrapper">
+          <h2 class="hotels-search__header">Заинтересовались?</h2>
+          <p class="hotels-search__text">Укажите предполагаемые даты<br> поездки, и мы покажем вам лучшие<br> предложения гостиниц в Седоне</p>
+        </div>
         <button class="hotel-search__button" type="button">Найти гостиницу</button>
       </section>
 

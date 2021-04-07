@@ -1,0 +1,34 @@
+.last-reasons {
+  background-color: $basic-light-grey;
+}
+
+.last-reasons__wrapper {
+  padding: 26px;
+}
+
+.last-reasons__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.last-reasons__header {
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.last-reasons__number,
+.last-reasons__text {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin: 0;
+}

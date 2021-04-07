@@ -1,0 +1,35 @@
+.first-reason {
+  background-color: $basic-blue;
+  color: $basic-white;
+}
+
+.first-reason__wrapper {
+  padding: 39px 12px;
+}
+
+.first-reason__header {
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.first-reason__number,
+.first-reason__text {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.first-reason__image {
+  background-image: url("../img/photo-city1.jpg");
+  background-repeat: no-repeat;
+  min-height: 260px;
+}

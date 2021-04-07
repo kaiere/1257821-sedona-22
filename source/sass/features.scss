@@ -1,0 +1,29 @@
+.features__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.features__wrapper {
+  padding: 26px 21px;
+}
+
+.features__header {
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.features__text {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  margin: 0;
+}

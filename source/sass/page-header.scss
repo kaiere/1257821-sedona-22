@@ -1,0 +1,22 @@
+.page__header {
+  background-color: $basic-white;
+}
+
+.main-nav__wrapper {
+  background-color: $basic-blue;
+}
+
+.main-nav__list {
+  list-style-type: none;
+  margin: 0;
+}
+
+.main-nav__link {
+  color: $basic-white;
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
