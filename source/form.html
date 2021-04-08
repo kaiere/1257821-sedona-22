@@ -41,8 +41,10 @@
 
       <section class="request">
         <h2 class="visually-hidden">Просьба отправить отзыв</h2> <!--Смысловой заголовок секции, потом скроем-->
-        <h3 class="request__header">Оставьте свой отзыв</h3>
-        <p class="request__text">Помогите нашим отелям стать лучше!<br> оставьте отзыв о них, а также о<br> посещенных вами<br> достопримечательностях</p>
+        <div class="request__wrapper">
+          <h3 class="request__header">Оставьте свой отзыв</h3>
+          <p class="request__text">Помогите нашим отелям стать лучше!<br> оставьте отзыв о них, а также о<br> посещенных вами<br> достопримечательностях</p>
+        </div>
       </section>
 
       <section class="review">
@@ -88,11 +90,11 @@
             <fieldset class="emotions">
               <legend class="emotions__legend">Опишите свои эмоции:</legend>
               <label class="emotions__description">
-                <textarea class="emotions-text" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
+                <textarea class="emotions__text" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
               </label>
             </fieldset>
             <button class="review__button" type="submit">Отправить отзыв</button>
-            <p class="review__required-fields">* — обязательные поля</p>
+            <p class="review__required-fields visually-hidden">* — обязательные поля</p>
           </form>
       </div>
       </section>

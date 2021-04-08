@@ -1,0 +1,80 @@
+.introduction,
+.contacts,
+.impression,
+.visited,
+.emotions {
+  border: none;
+}
+
+.introduction__legend,
+.contacts__legend,
+.impression__legend,
+.visited__legend,
+.emotions__legend {
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.introduction__name,
+.introduction__surname,
+.introduction__patronymic,
+.contacts__telephone,
+.contacts__email {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.introduction__field,
+.contacts__field,
+.emotions__text {
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+  background-color: $form-light-grey;
+  border: none;
+  &::placeholder {
+    color: $basic-black;
+  }
+}
+
+.impression__positive,
+.impression__negative,
+.impression__unsure,
+.visited__bridge,
+.visited__mountain,
+.visited__park,
+.visited__rocks {
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+}
+
+.review__button {
+  width: 280px;
+  height: 58px;
+  background-color: $basic-blue;
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: $basic-white;
+  text-transform: uppercase;
+  border-color: transparent;
+  margin: 51px 20px;
+}
