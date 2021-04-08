@@ -33,6 +33,7 @@
   text-transform: uppercase;
   margin: 0;
 }
+
 .introduction__field,
 .contacts__field,
 .emotions__text {
@@ -44,6 +45,7 @@
   margin: 0;
   background-color: $form-light-grey;
   border: none;
+
   &::placeholder {
     color: $basic-black;
   }
