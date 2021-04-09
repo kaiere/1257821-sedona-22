@@ -1,0 +1,27 @@
+.gallery__wrapper {
+  padding: 22px 20px;
+}
+
+.gallery__list {
+  list-style: none;
+}
+
+.gallery__pic-name,
+.gallery__likes {
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.gallery__author {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0;
+}
