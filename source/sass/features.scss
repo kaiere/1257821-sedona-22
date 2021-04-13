@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+.features__item {
+  margin: auto;
+}
+
 .features__wrapper {
   padding: 26px 21px;
 }
@@ -26,4 +30,15 @@
   line-height: 21px;
   text-transform: uppercase;
   margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .features__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .features__item {
+    text-align: center;
+  }
 }

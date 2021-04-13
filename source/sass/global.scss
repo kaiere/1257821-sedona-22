@@ -7,6 +7,7 @@
   line-height: 26px;
   font-weight: 700;
   color: $basic-black;
+  min-width: 320px;
 }
 
 a {
@@ -19,4 +20,12 @@ a {
   width: 1px;
   height: 1px;
   margin: -1px;
+}
+
+@media (min-width: $desktop-width) {
+  .page__body {
+    width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px $basic-shadow;
+  }
 }

@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -10,25 +11,25 @@
       <a class="page-header__logo">
         <img src="img/logotype-mobile.svg" width="102" height="84" alt="Седона">
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__toogle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">Главная</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="catalog.html">Фото и видео</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="form.html">Форма отзыва</a>
-            </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#">HTML Academy</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+        <nav class="main-nav">
+          <button class="main-nav__toogle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="catalog.html">Фото и видео</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="form.html">Форма отзыва</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">HTML Academy</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
     </header>
 
     <main class="page-main">
@@ -42,8 +43,8 @@
       <section class="introduction">
         <h2 class="visually-hidden">Почему Седона</h2> <!--Смысловой заголовок секции, потом скроем-->
         <div class="introduction__wrapper">
-          <h3 class="introduction__header">Седона — небольшой<br> городок в Аризоне,<br> заслуживающий большего!</h3>
-          <p class="introduction__text">Рассмотрим 5 причин, по которым<br> Седона круче, чем гранд каньон!</p>
+          <h3 class="introduction__header">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h3>
+          <p class="introduction__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </div>
       </section>
 
@@ -64,15 +65,15 @@
         <ul class="features__list"> <!--В мобильной версии пункт с едой идет самым последним. В планшетной и комп - вторым, оставила порядок как в них-->
           <li class="features__item features-house"> <!--Доп класс для иконки-->
             <h3 class="features__header">Жильё</h3>
-            <p class="features__text">Рекомендуем пожить в<br> настоящем мотеле, всё как<br> в кино!</p>
+            <p class="features__text">Рекомендуем пожить в настоящем<br> мотеле, всё как в кино!</p>
           </li>
           <li class="features__item features-food"> <!--Доп класс для иконки-->
             <h3 class="features__header">Еда</h3>
-            <p class="features__text">Всегда заказывайте<br> фирменный бургер, вы<br> не разочаруетесь!</p>
+            <p class="features__text">Всегда заказывайте фирменный бургер<br>, вы не разочаруетесь!</p>
           </li>
           <li class="features__item features-gifts"> <!--Доп класс для иконки-->
             <h3 class="features__header">Сувениры</h3>
-            <p class="features__text">Не только китайского, но и<br> местного производства!</p>
+            <p class="features__text">Не только китайского,<br> но и местного производства!</p>
           </li>
         </ul>
         </div>
@@ -115,14 +116,16 @@
       <section class="hotel-search">
         <div class="hotel-search__wrapper">
           <h2 class="hotels-search__header">Заинтересовались?</h2>
-          <p class="hotels-search__text">Укажите предполагаемые даты<br> поездки, и мы покажем вам лучшие<br> предложения гостиниц в Седоне</p>
+          <p class="hotels-search__text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         </div>
-        <button class="hotel-search__button" type="button">Найти гостиницу</button>
+        <div class="button__wrapper">
+          <button class="hotel-search__button" type="button">Найти гостиницу</button>
+        </div>
       </section>
 
       <section class="map">
         <h2 class="visually-hidden">Карта города</h2> <!--Смысловой заголовок секции, потом скроем-->
-        <img class="map__image" src="img/map-mobile.jpg" width="320" height="350" alt="Карта расположения города">
+        <div class="map__image"></div>
       </section>
     </main>
 

@@ -1,0 +1,19 @@
+.map__image {
+  background-image: url("../img/map-desktop.jpg");
+  background-repeat: no-repeat;
+  min-height: 350px;
+}
+
+@media (min-width: $tablet-width) {
+  .map__image {
+    min-width: 768px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map__image {
+    background-image: url("../img/map-desktop.jpg");
+    background-repeat: no-repeat;
+    min-width: 1200px;
+  }
+}
