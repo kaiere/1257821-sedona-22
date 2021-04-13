@@ -15,6 +15,7 @@
   line-height: 26px;
   text-transform: uppercase;
   margin: 0;
+  text-align: center;
 }
 
 .second-reason__number,
@@ -26,10 +27,41 @@
   line-height: 26px;
   text-transform: uppercase;
   margin: 0;
+  text-align: center;
 }
 
 .second-reason__image {
   background-image: url("../img/photo-bridge1.jpg");
   background-repeat: no-repeat;
-  min-height: 260px;
+  min-height: 256px;
+}
+
+@media (min-width: $tablet-width) {
+  .second-reason {
+    min-width: 768px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .second-reason__image {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .second-reason__wrapper {
+    grid-column: 2;
+    width: 256px;
+    margin: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .second-reason {
+    min-width: 1200px;
+  }
+
+  .first-reason__wrapper {
+    width: 400px;
+    margin: auto;
+  }
 }

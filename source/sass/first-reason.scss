@@ -15,6 +15,7 @@
   line-height: 26px;
   text-transform: uppercase;
   margin: 0;
+  text-align: center;
 }
 
 .first-reason__number,
@@ -26,10 +27,35 @@
   line-height: 26px;
   text-transform: uppercase;
   margin: 0;
+  text-align: center;
 }
 
 .first-reason__image {
-  background-image: url("../img/photo-city1.jpg");
+  background-image: url("../img/photo-city-1.jpg");
   background-repeat: no-repeat;
   min-height: 260px;
+}
+
+@media (min-width: $tablet-width) {
+  .first-reason {
+    min-width: 768px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .first-reason__wrapper {
+    width: 256px;
+    margin: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .first-reason {
+    min-width: 1200px;
+  }
+
+  .first-reason__wrapper {
+    width: 400px;
+    margin: auto;
+  }
 }

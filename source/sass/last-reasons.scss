@@ -12,6 +12,10 @@
   padding: 0;
 }
 
+.last-reasons__item {
+  margin: auto;
+}
+
 .last-reasons__header {
   font-family: "PT Sans Bold", "Arial", sans-serif;
   font-style: normal;
@@ -20,6 +24,7 @@
   line-height: 26px;
   text-transform: uppercase;
   margin: 0;
+  text-align: center;
 }
 
 .last-reasons__number,
@@ -31,4 +36,12 @@
   line-height: 21px;
   text-transform: uppercase;
   margin: 0;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .last-reasons__list {
+    display: flex;
+    justify-content: space-between;
+  }
 }
