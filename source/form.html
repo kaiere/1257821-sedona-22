@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -43,7 +44,7 @@
         <h2 class="visually-hidden">Просьба отправить отзыв</h2> <!--Смысловой заголовок секции, потом скроем-->
         <div class="request__wrapper">
           <h3 class="request__header">Оставьте свой отзыв</h3>
-          <p class="request__text">Помогите нашим отелям стать лучше!<br> оставьте отзыв о них, а также о<br> посещенных вами<br> достопримечательностях</p>
+          <p class="request__text">Помогите нашим отелям стать лучше! оставьте отзыв о них,<br> а также о посещенных вами достопримечательностях</p>
         </div>
       </section>
 
@@ -51,41 +52,62 @@
         <h2 class="visually-hidden">Форма для вашего отзыва</h2>
         <div class="review__wrapper">
           <form class="review__form" method="get" action="https://echo.htmlacademy.ru">
+            <div class="review__container">
             <fieldset class="introduction">
               <legend class="introduction__legend">Представьтесь:</legend>
-              <label class="introduction__name" for="name">Имя*:</label>
-              <input class="introduction__field" type="text" id="name" name="name" placeholder="Петр" required>
-              <label class="introduction__surname" for="surname">Фамилия*:</label>
-              <input class="introduction__field" type="text" id="surname" name="surname" placeholder="Иванов" required>
-              <label class="introduction__patronymic" for="patronymic">Отчество:</label>
-              <input class="introduction__field" type="text" id="patronymic" name="patronymic" placeholder="Александрович">
+              <div class="introduction__container">
+                <label class="introduction__name" for="name">Имя*:
+                  <input class="introduction__field" type="text" id="name" name="name" placeholder="Петр" required>
+                </label>
+                <label class="introduction__surname" for="surname">Фамилия*:
+                  <input class="introduction__field" type="text" id="surname" name="surname" placeholder="Иванов" required>
+                </label>
+                <label class="introduction__patronymic" for="patronymic">Отчество:
+                  <input class="introduction__field" type="text" id="patronymic" name="patronymic" placeholder="Александрович">
+                </label>
+              </div>
             </fieldset>
             <fieldset class="contacts">
               <legend class="contacts__legend">Контактная информация:</legend>
-              <label class="contacts__telephone" for="telephone">Контактный телефон*:</label>
-              <input class="contacts__field" type="tel" id="telephone" name="telephone" placeholder="Введите телефон" required>
-              <label class="contacts__email" for="email">Электронная почта*:</label>
-              <input class="contacts__field" type="email" id="email" name="email" placeholder="Введите e-mail" required>
+              <div class="contacts__container">
+                <label class="contacts__telephone" for="telephone">Контактный телефон*:
+                  <input class="contacts__field" type="tel" id="telephone" name="telephone" placeholder="Введите телефон" required>
+                </label>
+                <label class="contacts__email" for="email">Электронная почта*:
+                  <input class="contacts__field" type="email" id="email" name="email" placeholder="Введите e-mail" required>
+                </label>
+              </div>
             </fieldset>
             <fieldset class="impression">
               <legend class="impression__legend">Ваше общее впечатление:</legend>
-              <input type="radio" id="positive" name="your-impression" checked>
-              <label class="impression__positive" for="positive">Скорее положительное</label>
-              <input type="radio" id="negative" name="your-impression">
-              <label class="impression__negative" for="negative">Скорее отрицательное</label>
-              <input type="radio" id="unsure" name="your-impression">
-              <label class="impression__unsure" for="unsure">Затрудняюсь ответить</label>
+              <div class="impression__container">
+                <label class="impression__positive" for="positive">
+                  <input type="radio" id="positive" name="your-impression" checked>Скорее положительное
+                </label>
+                <label class="impression__negative" for="negative">
+                  <input type="radio" id="negative" name="your-impression">Скорее отрицательное
+                </label>
+                <label class="impression__unsure" for="unsure">
+                  <input type="radio" id="unsure" name="your-impression">Затрудняюсь ответить
+                </label>
+              </div>
             </fieldset>
             <fieldset class="visited">
               <legend class="visited__legend">Посещенные достопримечательности:</legend>
-              <input type="checkbox" id="bridge" name="bridge" checked>
-              <label class="visited__bridge" for="bridge">Мост Дьявола</label>
-              <input type="checkbox" id="mountain" name="mountain" checked>
-              <label class="visited__mountain" for="mountain">Гора-Колокол</label>
-              <input type="checkbox" id="park" name="park" checked>
-              <label class="visited__park" for="park">Слайд-парк</label>
-              <input type="checkbox" id="rocks" name="rocks">
-              <label class="visited__rocks" for="rocks">Красные скалы</label>
+              <div class="visited__container">
+                <label class="visited__bridge" for="bridge">
+                  <input type="checkbox" id="bridge" name="bridge" checked>Мост Дьявола
+                </label>
+                <label class="visited__mountain" for="mountain">
+                  <input type="checkbox" id="mountain" name="mountain" checked>Гора-Колокол
+                </label>
+                <label class="visited__park" for="park">
+                  <input type="checkbox" id="park" name="park" checked>Слайд-парк
+                </label>
+                <label class="visited__rocks" for="rocks">
+                  <input type="checkbox" id="rocks" name="rocks">Красные скалы
+                </label>
+              </div>
             </fieldset>
             <fieldset class="emotions">
               <legend class="emotions__legend">Опишите свои эмоции:</legend>
@@ -93,8 +115,11 @@
                 <textarea class="emotions__text" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
               </label>
             </fieldset>
+          </div>
+          <div class="button__container">
             <button class="review__button" type="submit">Отправить отзыв</button>
-            <p class="review__required-fields visually-hidden">* — обязательные поля</p>
+            <p class="review__required-fields">* — обязательные поля</p>
+          </div>
           </form>
       </div>
       </section>
