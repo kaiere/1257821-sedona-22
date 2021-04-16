@@ -4,6 +4,16 @@
 .visited,
 .emotions {
   border: none;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.contacts__container,
+.introduction__container,
+.impression__container,
+.visited__container {
+  display: flex;
+  flex-direction: column;
 }
 
 .introduction__legend,
@@ -24,7 +34,8 @@
 .introduction__surname,
 .introduction__patronymic,
 .contacts__telephone,
-.contacts__email {
+.contacts__email,
+.review__required-fields {
   font-family: "PT Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -49,6 +60,11 @@
   &::placeholder {
     color: $basic-black;
   }
+}
+
+.emotions__text {
+  width: 100%;
+  max-width: 279px;
 }
 
 .impression__positive,
@@ -79,4 +95,88 @@
   text-transform: uppercase;
   border-color: transparent;
   margin: 51px 20px;
+}
+
+@media (max-width: $mobile-width-only) {
+  .review__required-fields {
+    display: none;
+  }
+
+  .button__container {
+    text-align: center;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .review__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .impression {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .contacts {
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+  }
+
+  .visited {
+    grid-row: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+  }
+
+  .visited__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .emotions {
+    grid-row: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+  }
+
+  .review__button {
+    margin: 0;
+    width: 324px;
+  }
+
+  .button__container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .emotions__text {
+    max-width: 648px;
+  }
+
+  .introduction {
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts__container,
+  .visited__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .emotions__text {
+    max-width: 960px;
+  }
+
+  .review__button {
+    width: 480px;
+  }
 }
