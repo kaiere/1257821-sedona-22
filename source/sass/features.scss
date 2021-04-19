@@ -5,7 +5,40 @@
 }
 
 .features__item {
-  margin: auto;
+  margin: 0 auto;
+}
+
+.features__item--house::before {
+  position: absolute;
+  content: "";
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  height: 37px;
+  background-image: url("../img/icon-house.svg");
+  width: 39px;
+  background-size: contain;
+}
+
+.features__item--food::before {
+  position: absolute;
+  content: "";
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  height: 34px;
+  background-image: url("../img/icon-food.svg");
+  width: 40px;
+  background-size: contain;
+}
+
+.features__item--gifts::before {
+  position: absolute;
+  content: "";
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  height: 38px;
+  background-image: url("../img/icon-gift.svg");
+  width: 32px;
+  background-size: contain;
 }
 
 .features__wrapper {
@@ -20,6 +53,7 @@
   line-height: 26px;
   text-transform: uppercase;
   margin: 0;
+  padding-left: 50px;
 }
 
 .features__text {
@@ -30,15 +64,69 @@
   line-height: 21px;
   text-transform: uppercase;
   margin: 0;
+  padding-left: 50px;
 }
 
 @media (min-width: $tablet-width) {
   .features__list {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .features__item--food {
+    grid-column-start: 2;
+    grid-row-start: 1;
   }
 
   .features__item {
+    position: relative;
     text-align: center;
+    width: 192px;
+  }
+
+  .features__text,
+  .features__header {
+    padding-left: 0;
+  }
+
+  .features__text br {
+    display: none;
+  }
+
+  .features__header {
+    padding-top: 80px;
+  }
+
+  .features__item--food::before,
+  .features__item--gifts::before,
+  .features__item--house::before {
+    margin: auto;
+    right: 0;
+    left: 0;
+  }
+
+  .features__item--house::before {
+    height: 72px;
+    width: 75px;
+  }
+
+  .features__item--food::before {
+    height: 68px;
+    width: 76px;
+  }
+
+  .features__item--gifts::before {
+    height: 75px;
+    width: 64px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features__item {
+    width: 285px;
+  }
+
+  .features__text br {
+    display: block;
   }
 }
