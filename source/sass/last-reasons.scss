@@ -3,7 +3,7 @@
 }
 
 .last-reasons__wrapper {
-  padding: 26px;
+  padding: 0 26px;
 }
 
 .last-reasons__list {
@@ -13,7 +13,14 @@
 }
 
 .last-reasons__item {
+  width: 280px;
+  border-bottom: 1px $stroke-grey solid;
   margin: auto;
+  padding: 24px 0;
+
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .last-reasons__header {
@@ -43,5 +50,9 @@
   .last-reasons__list {
     display: flex;
     justify-content: space-between;
+  }
+
+  .last-reasons__item {
+    border-bottom: none;
   }
 }

@@ -2,6 +2,7 @@
   background-image: url("../img/map-desktop.jpg");
   background-repeat: no-repeat;
   min-height: 350px;
+  background-position: 50%;
 }
 
 @media (min-width: $tablet-width) {
@@ -12,8 +13,6 @@
 
 @media (min-width: $desktop-width) {
   .map__image {
-    background-image: url("../img/map-desktop.jpg");
-    background-repeat: no-repeat;
     min-width: 1200px;
   }
 }
