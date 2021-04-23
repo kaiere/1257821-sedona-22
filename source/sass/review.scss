@@ -5,13 +5,29 @@
 .emotions {
   border: none;
   text-align: center;
-  margin-top: 30px;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.review__container--border {
+  border-top: 1px $grey-border solid;
+  padding-top: 20px;
+}
+
+.impression__list,
+.visited__list {
+  list-style: none;
+  padding: 0;
+}
+
+.impression__item {
+  margin: 25px 0;
 }
 
 .contacts__container,
 .introduction__container,
-.impression__container,
-.visited__container {
+.impression__list,
+.visited__list {
   display: flex;
   flex-direction: column;
 }
@@ -42,7 +58,7 @@
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
-  margin: 0;
+  margin: 20px 0 0;
 }
 
 .introduction__field,
@@ -56,10 +72,29 @@
   margin: 0;
   background-color: $form-light-grey;
   border: none;
+  height: 58px;
 
   &::placeholder {
     color: $basic-black;
   }
+}
+
+.contacts__field {
+  width: 280px;
+  margin: auto;
+}
+
+.introduction__name .introduction__field {
+  width: 230px;
+}
+
+.introduction__surname .introduction__field {
+  width: 192px;
+}
+
+.introduction__patronymic .introduction__field {
+  width: 194px;
+  margin-left: 3px;
 }
 
 .emotions__text {
@@ -74,12 +109,72 @@
 .visited__mountain,
 .visited__park,
 .visited__rocks {
+  position: relative;
   font-family: "PT Sans Bold", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   margin: 0;
+  cursor: pointer;
+}
+
+.filter__input--radio + label::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -70px;
+  width: 48px;
+  height: 48px;
+  border: 5px solid $form-light-grey;
+  border-radius: 50%;
+  background: $form-light-grey;
+}
+
+.filter__input--radio:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -52px;
+  width: 18px;
+  height: 18px;
+  border: 3px solid $dark-grey;
+  border-radius: 50%;
+  background: $dark-grey;
+}
+
+.filter__input--checkbox:checked + label::before {
+  content: "";
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  background-image: url("../img/check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.visited__list {
+  display: grid;
+  grid-template-columns: max-content;
+  justify-content: center;
+}
+
+.visited__item {
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.filter__input--checkbox + label::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -70px;
+  width: 46px;
+  height: 46px;
+  border: 5px solid $form-light-grey;
+  border-radius: 5px;
+  background: $form-light-grey;
 }
 
 .review__button {
@@ -107,16 +202,22 @@
   }
 }
 
-
 @media (min-width: $tablet-width) {
   .review__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 
+  .review__container--border {
+    border: none;
+  }
+
   .impression {
     grid-column: 1;
     grid-row: 1;
+    margin-left: 35px;
+    // margin-left: auto;
+    border-right: 1px #dbdbdb solid;
   }
 
   .contacts {
@@ -126,6 +227,37 @@
     text-align: center;
   }
 
+  .contacts__legend,
+  .visited__legend,
+  .emotions__legend {
+    position: relative;
+  }
+
+  .contacts__legend::before,
+  .visited__legend::before,
+  .emotions__legend::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 65px;
+    right: 0;
+    width: 124px;
+    height: 1px;
+    background-color: $form-desktop-grey;
+  }
+
+  .contacts__legend::after,
+  .visited__legend::after,
+  .emotions__legend::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: 65px;
+    width: 124px;
+    height: 1px;
+    background-color: $form-desktop-grey;
+  }
+
   .visited {
     grid-row: 3;
     grid-column-start: 1;
@@ -133,9 +265,19 @@
     text-align: center;
   }
 
-  .visited__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  .visited__list {
+    grid-template-columns: 200px 200px;
+    justify-content: center;
+    column-gap: 50px;
+  }
+
+  .visited__item {
+    margin: 45px 30px 10px;
+    margin-right: auto;
+  }
+
+  .visited__list:nth-child(3) {
+    margin-left: 40px;
   }
 
   .emotions {
@@ -161,10 +303,66 @@
 
   .introduction {
     text-align: left;
+    margin-left: 50px;
+  }
+
+  .contacts__field {
+    width: 648px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .review__container {
+    padding: 0 120px;
+  }
+
+  .introduction__name .introduction__field {
+    width: 350px;
+  }
+
+  .introduction__surname .introduction__field,
+  .introduction__patronymic .introduction__field {
+    width: 314px;
+  }
+
+  .contacts__telephone--hidden {
+    font-size: 0;
+  }
+
+  .contacts__legend::before,
+  .contacts__legend::after,
+  .visited__legend::before,
+  .visited__legend::after,
+  .emotions__legend::before,
+  .emotions__legend::after {
+    width: 280px;
+  }
+
+  .contacts__legend::before,
+  .visited__legend::before,
+  .emotions__legend::before {
+    left: 15px;
+  }
+
+  .contacts__legend::after,
+  .visited__legend::after,
+  .emotions__legend::after {
+    right: 15px;
+  }
+
+  .introduction {
+    margin-left: 84px;
+  }
+
+  .impression {
+    margin-left: 35px;
+  }
+
+  .impression__container {
+    margin-left: 30px;
+    text-align: left;
+  }
+
   .contacts__container,
   .visited__container {
     display: flex;
@@ -178,5 +376,16 @@
 
   .review__button {
     width: 480px;
+  }
+
+  .contacts__field {
+    width: 315px;
+    margin: 0;
+  }
+
+  .visited__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 105px;
+    margin-left: 40px;
   }
 }
