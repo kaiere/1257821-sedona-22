@@ -1,7 +1,7 @@
 .welcome {
   background-image: url("../img/back-mobile.jpg");
   background-color: $basic-blue;
-  min-height: 389px;
+  height: 389px;
   min-width: 320px;
   display: block;
   position: relative;
@@ -22,20 +22,40 @@
   background-position-x: center;
 }
 
+.welcome__inner-page {
+  height: 152px;
+  background-position-y: bottom;
+}
+
 .welcome__text {
   padding-top: 90px;
   text-align: center;
 }
 
+@media (max-width: $mobile-width-only) {
+  .welcome__inner-page--text {
+    padding-top: 52px;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .welcome {
     background-image: url("../img/back-desktop.jpg");
-    min-height: 516px;
+    height: 516px;
     background-size: cover;
   }
 
   .welcome img {
     width: 461px;
     height: auto;
+  }
+
+  .welcome__inner-page {
+    height: 290px;
+    background-size: auto;
+  }
+
+  .welcome__inner-page--text img {
+    width: 457px;
   }
 }
