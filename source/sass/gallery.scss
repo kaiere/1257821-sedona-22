@@ -33,6 +33,62 @@
   border-top: $grey-border 1px solid;
 }
 
+.gallery__pic {
+  min-width: 280px;
+  height: 280px;
+}
+
+.gallery__pic--road,
+.gallery__pic--plant,
+.gallery__pic--forest,
+.gallery__pic--devil {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gallery__pic--road {
+  background-image: url("../img/photo-1-desktop-big.jpg");
+}
+
+.gallery__pic--plant {
+  background-image: url("../img/photo-2-desktop.jpg");
+}
+
+.gallery__pic--forest {
+  background-image: url("../img/photo-3-desktop.jpg");
+}
+
+.gallery__pic--devil {
+  background-image: url("../img/photo-4-desktop.jpg");
+}
+
+.gallery__likes {
+  position: relative;
+  padding-left: 35px;
+}
+
+.gallery__likes::before {
+  position: absolute;
+  content: "";
+  background-image: url("../img/like-icon.svg");
+  top: 0;
+  left: 0;
+  width: 23px;
+  height: 21px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.video__image {
+  background-image: url("../img/video-desktop.jpg");
+  min-width: 320px;
+  min-height: 201px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+}
+
 @media (min-width: $tablet-width) {
   .gallery__list {
     grid-template-columns: 1fr 1fr;
@@ -53,8 +109,35 @@
     grid-column-end: 3;
   }
 
+  .gallery__pic--road {
+    min-width: 648px;
+    height: 400px;
+  }
+
+  .gallery__pic--plant,
+  .gallery__pic--forest,
+  .gallery__pic--devil {
+    min-width: 324px;
+    height: 267px;
+  }
+
   .gallery__wrapper {
     padding: 0 60px;
+  }
+
+  .gallery__container {
+    display: flex;
+    padding: 20px;
+  }
+
+  .gallery__likes {
+    margin-left: auto;
+    margin-top: revert;
+  }
+
+  .video__image {
+    min-width: 640px;
+    min-height: 500px;
   }
 }
 
@@ -69,10 +152,26 @@
 
   .gallery__item {
     background: none;
+    color: $basic-white;
+  }
+
+  .gallery__container {
+    background-color: $black-transparent;
+    position: relative;
+    margin-top: -88px;
+    z-index: 1;
+  }
+
+  .gallery__likes::before {
+    background-image: url("../img/like-icon-white.svg");
   }
 
   .gallery__item--popular {
     grid-column-start: 1;
     grid-column-end: 4;
+  }
+
+  .video__image {
+    width: 800px;
   }
 }
