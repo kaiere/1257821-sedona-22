@@ -36,6 +36,10 @@
   min-height: 256px;
   background-size: cover;
   background-position: 50%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/photo-bridge-1X2.jpg");
+  }
 }
 
 @media (min-width: $tablet-width) {

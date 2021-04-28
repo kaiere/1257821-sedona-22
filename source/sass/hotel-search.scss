@@ -30,6 +30,7 @@
 }
 
 .hotel-search__button {
+  cursor: pointer;
   width: 280px;
   height: 58px;
   background-color: $basic-blue;
@@ -42,6 +43,16 @@
   text-transform: uppercase;
   border-color: transparent;
   margin: 35px 20px;
+
+  &:hover,
+  &:focus {
+    background-color: $button-hover-blue;
+  }
+
+  &:active {
+    background-color: $button-down-blue;
+    color: $transparent-white;
+  }
 }
 
 @media (min-width: $tablet-width) {

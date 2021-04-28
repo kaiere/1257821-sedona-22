@@ -50,6 +50,10 @@
   min-height: 260px;
   background-size: cover;
   background-position: 50%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/photo-city-1X2.jpg");
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -67,6 +71,7 @@
   .first-reason__wrapper {
     width: 256px;
     margin: auto;
+    padding: 0;
   }
 }
 
