@@ -5,10 +5,6 @@
 }
 
 .page-header__logo {
-  // display: flex;
-  // justify-content: center;
-  // position: relative;
-  // order: 2;
   display: grid;
   grid-template-rows: 56px;
   justify-content: center;
@@ -151,6 +147,28 @@
     text-transform: uppercase;
     box-shadow: none;
     padding-top: 15px;
+
+    &:hover,
+    &:focus {
+      color: $basic-blue;
+    }
+
+    &:active {
+      color: $link-down-black;
+    }
+  }
+
+  .main-nav__link--active {
+    color: $active-brown;
+
+    &:hover,
+    &:focus {
+      color: $active-hov-brown;
+    }
+
+    &:active {
+      color: $active-down-brown;
+    }
   }
 
   .main-nav__toggle {
@@ -168,19 +186,8 @@
     width: 239px;
   }
 
-  .page-header__logo img {
-    opacity: 0;
+  .page-header__logo--img {
     width: 187px;
     height: 97px;
-  }
-
-  .page-header__logo {
-    display: flex;
-    position: absolute;
-    left: 50%;
-    top: 0%;
-    transform: translateX(-50%);
-    z-index: 1;
-    background-image: url("../img/logotype-desktop.svg");
   }
 }
