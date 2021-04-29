@@ -77,6 +77,14 @@
   &::placeholder {
     color: $basic-black;
   }
+
+  &:hover {
+    background-color: $grey-border;
+  }
+
+  &:focus {
+    background-color: $basic-white;
+  }
 }
 
 .contacts__field {
@@ -131,6 +139,31 @@
   background: $form-light-grey;
 }
 
+.filter__input--radio:hover + label::before,
+.filter__input--radio:focus + label::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -70px;
+  width: 48px;
+  height: 48px;
+  border: 5px solid $grey-border;
+  border-radius: 50%;
+  background: $grey-border;
+}
+
+.filter__input--radio:active + label::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -70px;
+  width: 48px;
+  height: 48px;
+  border: 5px solid $button-down-grey;
+  border-radius: 50%;
+  background: $button-down-grey;
+}
+
 .filter__input--radio:checked + label::after {
   content: "";
   position: absolute;
@@ -143,7 +176,8 @@
   background: $dark-grey;
 }
 
-.filter__input--checkbox:checked + label::before {
+.filter__input--checkbox:checked + label::before,
+.filter__input--checkbox:checked:hover + label::before {
   content: "";
   position: absolute;
   width: 46px;
@@ -177,6 +211,18 @@
   background: $form-light-grey;
 }
 
+.filter__input--checkbox:hover + label::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -70px;
+  width: 46px;
+  height: 46px;
+  border: 5px solid $grey-border;
+  border-radius: 5px;
+  background: $grey-border;
+}
+
 .review__button {
   width: 280px;
   height: 58px;
@@ -190,6 +236,16 @@
   text-transform: uppercase;
   border-color: transparent;
   margin: 51px 20px;
+
+  &:hover,
+  &:focus {
+    background-color: $button-hover-blue;
+  }
+
+  &:active {
+    background-color: $button-down-blue;
+    color: $transparent-white;
+  }
 }
 
 @media (max-width: $mobile-width-only) {
