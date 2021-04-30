@@ -2,6 +2,8 @@
   display: grid;
   list-style: none;
   padding: 0;
+  margin: 0 auto;
+  width: 320px;
 }
 
 .gallery__pic-name,
@@ -33,35 +35,35 @@
   border-top: $grey-border 1px solid;
 }
 
-.gallery__pic {
-  min-width: 280px;
-  height: 280px;
-}
+// .gallery__pic {
+//   min-width: 280px;
+//   height: 280px;
+// }
 
-.gallery__pic--road,
-.gallery__pic--plant,
-.gallery__pic--forest,
-.gallery__pic--devil {
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+// .gallery__pic--road,
+// .gallery__pic--plant,
+// .gallery__pic--forest,
+// .gallery__pic--devil {
+//   background-position: 50%;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }
 
-.gallery__pic--road {
-  background-image: url("../img/photo-1-desktop-big.jpg");
-}
+// .gallery__pic--road {
+//   background-image: url("../img/photo-1-desktop-big.jpg");
+// }
 
-.gallery__pic--plant {
-  background-image: url("../img/photo-2-desktop.jpg");
-}
+// .gallery__pic--plant {
+//   background-image: url("../img/photo-2-desktop.jpg");
+// }
 
-.gallery__pic--forest {
-  background-image: url("../img/photo-3-desktop.jpg");
-}
+// .gallery__pic--forest {
+//   background-image: url("../img/photo-3-desktop.jpg");
+// }
 
-.gallery__pic--devil {
-  background-image: url("../img/photo-4-desktop.jpg");
-}
+// .gallery__pic--devil {
+//   background-image: url("../img/photo-4-desktop.jpg");
+// }
 
 .gallery__likes {
   position: relative;
@@ -87,11 +89,16 @@
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/video-desktopX2.jpg");
+  }
 }
 
 @media (min-width: $tablet-width) {
   .gallery__list {
     grid-template-columns: 1fr 1fr;
+    width: 648px;
   }
 
   .gallery__item {
@@ -109,25 +116,29 @@
     grid-column-end: 3;
   }
 
-  .gallery__pic--road {
-    min-width: 648px;
-    height: 400px;
-  }
+  // .gallery__pic--road {
+  //   min-width: 648px;
+  //   height: 400px;
+  // }
 
-  .gallery__pic--plant,
-  .gallery__pic--forest,
-  .gallery__pic--devil {
-    min-width: 324px;
-    height: 267px;
-  }
+  // .gallery__pic--plant,
+  // .gallery__pic--forest,
+  // .gallery__pic--devil {
+  //   min-width: 324px;
+  //   height: 267px;
+  // }
 
   .gallery__wrapper {
     padding: 0 60px;
   }
 
+  .gallery__pic picture {
+    display: flex;
+  }
+
   .gallery__container {
     display: flex;
-    padding: 20px;
+    padding: 16px;
   }
 
   .gallery__likes {
@@ -148,6 +159,7 @@
 
   .gallery__list {
     grid-template-columns: 1fr 1fr 1fr;
+    width: auto;
   }
 
   .gallery__item {
@@ -158,7 +170,7 @@
   .gallery__container {
     background-color: $black-transparent;
     position: relative;
-    margin-top: -88px;
+    margin-top: -80px;
     z-index: 1;
   }
 
