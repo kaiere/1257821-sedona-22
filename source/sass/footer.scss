@@ -48,6 +48,18 @@
   justify-content: center;
   width: 46px;
   height: 48px;
+
+  &:hover {
+    background-color: $button-hover-blue;
+  }
+
+  &:active {
+    background-color: $button-down-blue;
+  }
+
+  &:active .social__link--icon {
+    opacity: 0.3;
+  }
 }
 
 .copyright__text {
@@ -58,6 +70,14 @@
   line-height: 26px;
   text-transform: uppercase;
   margin: 0 13px 0 0;
+}
+
+.copyright__link:hover .copyright__link--icon {
+  fill: $basic-blue;
+}
+
+.copyright__link:active .copyright__link--icon {
+  fill: $link-down-black;
 }
 
 @media (min-width: $tablet-width) {
