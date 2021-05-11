@@ -32,6 +32,39 @@
   flex-direction: column;
 }
 
+.contacts__container--tel,
+.contacts__container--mail {
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.contacts__container--tel::after {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  background-color: $grey-icon;
+  background-image: url("../img/phone.svg");
+  width: 58px;
+  height: 58px;
+  background-position: center;
+  top: 0;
+  right: 0;
+}
+
+.contacts__container--mail::after {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  background-color: $grey-icon;
+  background-image: url("../img/mail.svg");
+  width: 58px;
+  height: 58px;
+  background-position: center;
+  top: 0;
+  right: 0;
+}
+
 .introduction__legend,
 .contacts__legend,
 .impression__legend,
@@ -73,6 +106,7 @@
   background-color: $form-light-grey;
   border: none;
   height: 58px;
+  padding: 0;
 
   &::placeholder {
     color: $basic-black;
@@ -108,6 +142,7 @@
 .emotions__text {
   width: 100%;
   max-width: 279px;
+  height: 160px;
 }
 
 .impression__positive,
@@ -272,7 +307,6 @@
     grid-column: 1;
     grid-row: 1;
     margin-left: 35px;
-    // margin-left: auto;
     border-right: 1px #dbdbdb solid;
   }
 
@@ -281,6 +315,11 @@
     grid-column-start: 1;
     grid-column-end: 3;
     text-align: center;
+  }
+
+  .contacts__container--tel,
+  .contacts__container--mail {
+    width: 648px;
   }
 
   .contacts__legend,
@@ -344,6 +383,7 @@
   }
 
   .review__button {
+    cursor: pointer;
     margin: 0;
     width: 324px;
   }
@@ -424,6 +464,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  .contacts__container--tel,
+  .contacts__container--mail {
+    width: 315px;
   }
 
   .emotions__text {
