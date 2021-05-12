@@ -7,6 +7,7 @@
   text-transform: uppercase;
   margin: 0;
   text-align: center;
+  padding-bottom: 40px;
 }
 
 .video__text {
@@ -20,16 +21,156 @@
   text-align: center;
 }
 
-.video__image {
+.video__container {
   margin-top: 33px;
+}
+
+.video__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.video__interface {
+  position: relative;
+  background: $form-light-grey;
+  width: 230px;
+  min-height: 66px;
+  margin: 0 auto;
+  padding: 0 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.video__interface::before {
+  content: "";
+  position: absolute;
+  bottom: 82px;
+  left: 77px;
+  width: 10px;
+  height: 10px;
+  background: $basic-white;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.video__button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.video__play-container {
+  background: $black-line;
+  width: 100%;
+  position: absolute;
+  top: -45px;
+  left: 0;
+  margin: 0 auto;
+  padding: 22px 0 20px;
+}
+
+.video__play-line {
+  margin: 0 auto;
+  height: 3px;
+  width: 100%;
+  max-width: 235px;
+  background: $line-white;
+}
+
+.video__button--replay {
+  margin-right: auto;
+}
+
+.video__button--sub {
+  margin-right: 30px;
+}
+
+.video__button--icon {
+  fill: $play-icon-grey;
+}
+
+.video__button:hover .video__button--icon,
+.video__button:focus .video__button--icon {
+  fill: $dark-grey;
+}
+
+.video__button:active .video__button--icon {
+  fill: $dark-grey;
+  opacity: 0.3;
 }
 
 .video__wrapper {
   @media (min-width: $tablet-width) {
-    padding: 0 60px;
+    padding: 59px 60px 40px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 200px;
+    padding: 63px 200px 85px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .video__container {
+    position: relative;
+    min-width: 100%;
+  }
+
+  .video__intro {
+    font-size: 30px;
+  }
+
+  .video__interface {
+    background: $black-line;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 578px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 92px;
+    padding: 0 35px;
+  }
+
+  .video__play-container {
+    position: static;
+    background: 0 0;
+  }
+
+  .video__play-line {
+    max-width: 400px;
+  }
+
+  .video__button--icon {
+    fill: $basic-white;
+  }
+
+  .video__button:hover .video__button--icon,
+  .video__button:focus .video__button--icon {
+    fill: $basic-white;
+    opacity: 0.6;
+  }
+
+  .video__button:active .video__button--icon {
+    fill: $basic-white;
+    opacity: 0.3;
+  }
+
+  .video__interface::before {
+    bottom: 39px;
+    left: 205px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .video__interface {
+    width: 730px;
+  }
+
+  .video__play-line {
+    max-width: 540px;
   }
 }

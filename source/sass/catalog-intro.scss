@@ -11,6 +11,11 @@
   text-transform: uppercase;
   margin: 0;
   text-align: center;
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .catalog-intro__text {
