@@ -6,11 +6,14 @@
 
 .features__item {
   margin: 0 auto;
+  position: relative;
 }
 
 .features__item--house::before {
   position: absolute;
   content: "";
+  top: -9px;
+  left: 1px;
   background-position: bottom center;
   background-repeat: no-repeat;
   height: 37px;
@@ -24,7 +27,9 @@
   content: "";
   background-position: bottom center;
   background-repeat: no-repeat;
-  height: 34px;
+  height: 35px;
+  top: -5px;
+  left: -2px;
   background-image: url("../img/icon-food.svg");
   width: 40px;
   background-size: contain;
@@ -36,13 +41,15 @@
   background-position: bottom center;
   background-repeat: no-repeat;
   height: 38px;
+  top: -11px;
+  left: 5px;
   background-image: url("../img/icon-gift.svg");
   width: 32px;
   background-size: contain;
 }
 
 .features__wrapper {
-  padding: 60px 21px;
+  padding: 35px 20px 9px;
 }
 
 .features__header {
@@ -52,7 +59,7 @@
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 0 17px;
   padding-left: 50px;
 }
 
@@ -63,18 +70,25 @@
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 0 25px;
   padding-left: 50px;
+}
+
+@media (max-width: $mobile-width-only) {
+  .features__text br {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .features__wrapper {
-    padding: 81px 21px;
+    padding: 81px 21px 35px;
   }
 
   .features__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 42px;
   }
 
   .features__item--food {
@@ -93,17 +107,17 @@
     padding-left: 0;
   }
 
+  .features__text--gift br {
+    display: none;
+  }
+
   .features__header {
     font-size: 21px;
     padding-top: 76px;
   }
 
   .features__text {
-    padding-top: 24px;
-  }
-
-  .features__text br {
-    display: none;
+    padding-top: 7px;
   }
 
   .features__item--food::before,
@@ -132,8 +146,12 @@
 }
 
 @media (min-width: $desktop-width) {
+  .features__wrapper {
+    padding: 81px 21px 56px;
+  }
+
   .features__item {
-    width: 285px;
+    width: 296px;
   }
 
   .features__text br {

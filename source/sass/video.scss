@@ -5,9 +5,9 @@
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
-  margin: 0;
+  margin: 20px 0 0;
   text-align: center;
-  padding-bottom: 40px;
+  padding-bottom: 29px;
 }
 
 .video__text {
@@ -19,10 +19,12 @@
   text-transform: uppercase;
   margin: 0;
   text-align: center;
+  padding: 0 25px;
 }
 
 .video__container {
   margin-top: 33px;
+  text-align: center;
 }
 
 .video__image {
@@ -44,10 +46,10 @@
 .video__interface::before {
   content: "";
   position: absolute;
-  bottom: 82px;
-  left: 77px;
-  width: 10px;
-  height: 10px;
+  bottom: 83px;
+  left: 58px;
+  width: 9px;
+  height: 9px;
   background: $basic-white;
   border-radius: 50%;
   z-index: 1;
@@ -102,6 +104,9 @@
 }
 
 .video__wrapper {
+  margin-top: 31px;
+  margin-bottom: 39px;
+
   @media (min-width: $tablet-width) {
     padding: 59px 60px 40px;
   }
@@ -111,14 +116,30 @@
   }
 }
 
+@media (max-width: $mobile-width-only) {
+  .video__text br {
+    display: none;
+  }
+}
+
 @media (min-width: $tablet-width) {
+  .video__wrapper {
+    padding-top: 1px;
+    margin-bottom: 0;
+  }
+
   .video__container {
+    margin-top: 86px;
     position: relative;
     min-width: 100%;
   }
 
   .video__intro {
     font-size: 30px;
+  }
+
+  .video__text {
+    margin: 3px 0 0;
   }
 
   .video__interface {
@@ -131,13 +152,14 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 92px;
+    height: 93px;
     padding: 0 35px;
   }
 
   .video__play-container {
     position: static;
     background: 0 0;
+    padding: 20px 0 20px;
   }
 
   .video__play-line {
@@ -146,6 +168,15 @@
 
   .video__button--icon {
     fill: $basic-white;
+  }
+
+  .video__button--sub {
+    margin-right: 37px;
+  }
+
+  .video__button--full {
+    position: relative;
+    left: -6px;
   }
 
   .video__button:hover .video__button--icon,
@@ -160,17 +191,37 @@
   }
 
   .video__interface::before {
-    bottom: 39px;
-    left: 205px;
+    bottom: 42px;
+    left: 206px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .video__wrapper {
+    padding-top: 5px;
+  }
+
+  .video__container {
+    margin-top: 84px;
+  }
+
   .video__interface {
     width: 730px;
   }
 
+  .video__interface::before {
+    bottom: 42px;
+  }
+
   .video__play-line {
     max-width: 540px;
+  }
+
+  .video__button--sub {
+    margin-right: 39px;
+  }
+
+  .video__button--full {
+    left: -8px;
   }
 }

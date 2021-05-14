@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -16,7 +16,7 @@
         </picture>
       </a>
         <nav class="main-nav main-nav--opened">
-          <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+          <button class="main-nav__toggle main-nav__toggle--no-js" type="button" aria-label="Открыть меню"></button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list">
               <li class="main-nav__item">
@@ -55,7 +55,7 @@
       <section class="first-reason">
         <h2 class="visually-hidden">Причина поехать в Седону</h2> <!--Смысловой заголовок секции, потом скроем-->
         <div class="first-reason__wrapper">
-          <h3 class="first-reason__header">Настоящий городок</h3>
+          <h3 class="first-reason__header">Настоящий<br> городок</h3>
           <p class="first-reason__number">— №1 —</p>
           <p class="first-reason__text">Седона не аттракцион для туристов, там<br> течёт своя жизнь</p>
         </div>
@@ -73,11 +73,11 @@
           </li>
           <li class="features__item features__item--gifts"> <!--Доп класс для иконки-->
             <h3 class="features__header">Сувениры</h3>
-            <p class="features__text">Не только китайского,<br> но и местного производства!</p>
+            <p class="features__text features__text--gift">Не только китайского,<br> но и местного производства!</p>
           </li>
           <li class="features__item features__item--food"> <!--Доп класс для иконки-->
             <h3 class="features__header">Еда</h3>
-            <p class="features__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            <p class="features__text">Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
           </li>
         </ul>
         </div>
@@ -86,9 +86,9 @@
       <section class="second-reason">
         <h2 class="visually-hidden">Причина поехать в Седону</h2> <!--Смысловой заголовок секции, потом скроем-->
         <div class="second-reason__wrapper">
-          <h3 class="second-reason__header">Там есть мост дьявола</h3>
+          <h3 class="second-reason__header">Там есть<br> мост дьявола</h3>
           <p class="second-reason__number">— №2 —</p>
-          <p class="second-reason__text">Да, по нему можно пройти!<br> Если вы осмелитесь, конечно</p>
+          <p class="second-reason__text">Да, по нему можно<br> пройти! Если вы<br> осмелитесь, конечно</p>
         </div>
         <div class="second-reason__image">
         </div>
@@ -99,19 +99,19 @@
         <div class="last-reasons__wrapper">
         <ul class="last-reasons__list">
           <li class="last-reasons__item">
-            <h3 class="last-reasons__header">Небольшая площадь</h3>
+            <h3 class="last-reasons__header">Небольшая<br> площадь</h3>
             <p class="last-reasons__number">— №3 —</p>
-            <p class="last-reasons__text">Все интересные места находятся<br> очень близко</p>
+            <p class="last-reasons__text">Все интересные места<br> находятся очень близко</p>
           </li>
-          <li class="last-reasons__item">
-            <h3 class="last-reasons__header">Красивая дорога</h3>
+          <li class="last-reasons__item--small">
+            <h3 class="last-reasons__header">Красивая<br> дорога</h3>
             <p class="last-reasons__number">— №4 —</p>
-            <p class="last-reasons__text">Ехать в седону из Лас-Вегаса<br> совсем не скучно!</p>
+            <p class="last-reasons__text">Ехать в седону из<br> Лас-Вегаса совсем не скучно!</p>
           </li>
           <li class="last-reasons__item">
-            <h3 class="last-reasons__header">Мало туристов</h3>
+            <h3 class="last-reasons__header">Мало<br> туристов</h3>
             <p class="last-reasons__number">— №5 —</p>
-            <p class="last-reasons__text">Большинство едет в гранд каньон<br> и толпится там</p>
+            <p class="last-reasons__text">Большинство едет в<br> гранд каньон и толпится там</p>
           </li>
         </ul>
         </div>
@@ -123,13 +123,15 @@
           <p class="hotels-search__text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         </div>
         <div class="button__wrapper">
-          <button class="hotel-search__button" type="button">Найти гостиницу</button>
+          <a class="hotel-search__button" target="_blank" href="#">Найти гостиницу</a>
         </div>
       </section>
 
       <section class="map">
         <h2 class="visually-hidden">Карта города</h2> <!--Смысловой заголовок секции, потом скроем-->
-        <div class="map__image"></div>
+        <div class="map__image">
+          <iframe class="map__google" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d844294.3168252502!2d-111.87322!3d34.247914!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b08ebcb4c186b%3A0x423927b17fc1cd71!2z0JDRgNC40LfQvtC90LAsINCh0KjQkA!5e0!3m2!1sru!2sua!4v1620827687204!5m2!1sru!2sua" width="600" height="350" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
       </section>
     </main>
 
@@ -173,5 +175,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/nav.min.js"></script>
   </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -15,8 +15,8 @@
           <img class="page-header__logo--img" src="img/logotype-mobile.svg" width="102" height="84" alt="Седона">
         </picture>
       </a>
-        <nav class="main-nav main-nav--opened">
-          <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+      <nav class="main-nav main-nav--opened">
+        <button class="main-nav__toggle main-nav__toggle--no-js" type="button" aria-label="Открыть меню"></button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list">
               <li class="main-nav__item">
@@ -59,15 +59,15 @@
             <div class="review__container">
                 <fieldset class="introduction__quest">
                   <div class="review__container--border">
-                    <legend class="introduction__legend">Представьтесь:</legend>
+                    <legend class="introduction__legend legend--style">Представьтесь:</legend>
                     <div class="introduction__container">
-                      <label class="introduction__name" for="name">Имя*:
-                        <input class="introduction__field" type="text" id="name" name="name" placeholder="Петр" required>
+                      <label class="introduction__name introduction--style" for="name">Имя*:
+                        <input class="introduction__field field--name" type="text" id="name" name="name" placeholder="Петр" required>
                       </label>
-                      <label class="introduction__surname" for="surname">Фамилия*:
-                        <input class="introduction__field" type="text" id="surname" name="surname" placeholder="Иванов" required>
+                      <label class="introduction__surname introduction--style" for="surname">Фамилия*:
+                        <input class="introduction__field field--surname" type="text" id="surname" name="surname" placeholder="Иванов" required>
                       </label>
-                      <label class="introduction__patronymic" for="patronymic">Отчество:
+                      <label class="introduction__patronymic introduction--style" for="patronymic">Отчество:
                         <input class="introduction__field" type="text" id="patronymic" name="patronymic" placeholder="Александрович">
                       </label>
                     </div>
@@ -75,35 +75,35 @@
                 </fieldset>
                 <fieldset class="contacts">
                   <div class="review__container--border">
-                    <legend class="contacts__legend">Контактная информация:</legend>
+                    <legend class="contacts__legend legend--style">Контактная информация:</legend>
                     <div class="contacts__container">
-                      <label class="contacts__telephone" for="telephone"><span class="contacts__telephone--hidden">Контактный</span> телефон*:</label>
+                      <label class="contacts__telephone contacts--style" for="telephone"><span class="contacts__telephone--hidden">Контактный</span> телефон*:</label>
                       <div class="contacts__container--tel">
-                        <input class="contacts__field" type="tel" id="telephone" name="telephone" placeholder="Введите телефон" required>
+                        <input class="contacts__field field--tel" type="tel" id="telephone" name="telephone" placeholder="Введите телефон" required>
                       </div>
-                        <label class="contacts__email" for="email">Электронная почта*:</label>
+                        <label class="contacts__email contacts--style" for="email">Электронная почта*:</label>
                         <div class="contacts__container--mail">
-                          <input class="contacts__field" type="email" id="email" name="email" placeholder="Введите e-mail" required>
+                          <input class="contacts__field field--mail" type="email" id="email" name="email" placeholder="Введите e-mail" required>
                         </div>
                     </div>
                   </div>
                 </fieldset>
                 <fieldset class="impression">
                   <div class="review__container--border">
-                    <legend class="impression__legend">Ваше общее впечатление:</legend>
+                    <legend class="impression__legend legend--style">Ваше общее впечатление:</legend>
                     <div class="impression__container">
                       <ul class="impression__list">
                         <li class="impression__item">
                           <input class="visually-hidden filter__input--radio" type="radio" id="positive" name="your-impression" checked>
-                          <label class="impression__positive" for="positive">Скорее положительное</label>
+                          <label class="impression__positive impression--style" for="positive">Скорее положительное</label>
                         </li>
                       <li class="impression__item">
                         <input class="visually-hidden filter__input--radio" type="radio" id="negative" name="your-impression">
-                        <label class="impression__negative" for="negative">Скорее отрицательное</label>
+                        <label class="impression__negative impression--style" for="negative">Скорее отрицательное</label>
                       </li>
                       <li class="impression__item">
                         <input class="visually-hidden filter__input--radio" type="radio" id="unsure" name="your-impression">
-                        <label class="impression__unsure" for="unsure">Затрудняюсь ответить</label>
+                        <label class="impression__unsure impression--style" for="unsure">Затрудняюсь ответить</label>
                       </li>
                       </ul>
                     </div>
@@ -111,7 +111,7 @@
                 </fieldset>
                 <fieldset class="visited">
                   <div class="review__container--border">
-                    <legend class="visited__legend">Посещенные достопримечательности:</legend>
+                    <legend class="visited__legend legend--style">Посещенные<br> достопримечательности:</legend>
                     <ul class="visited__list">
                       <li class="visited__item">
                         <input class="visually-hidden filter__input--checkbox" type="checkbox" id="bridge" name="bridge" checked>
@@ -125,7 +125,7 @@
                         <input class="visually-hidden filter__input--checkbox" type="checkbox" id="park" name="park" checked>
                         <label class="visited__park" for="park">Слайд-парк</label>
                       </li>
-                      <li class="visited__item">
+                      <li class="visited__item--last">
                         <input class="visually-hidden filter__input--checkbox" type="checkbox" id="rocks" name="rocks">
                         <label class="visited__rocks" for="rocks">Красные скалы</label>
                       </li>
@@ -134,7 +134,7 @@
                 </fieldset>
                 <fieldset class="emotions">
                   <div class="review__container--border">
-                    <legend class="emotions__legend">Опишите свои эмоции:</legend>
+                    <legend class="emotions__legend legend--style">Опишите свои эмоции:</legend>
                     <label class="emotions__description">
                       <textarea class="emotions__text" name="emotions" placeholder="Опишите подробно все свои восторги"></textarea>
                     </label>
@@ -147,6 +147,26 @@
           </div>
           </form>
       </div>
+      </section>
+
+      <section class="modal modal--fail">
+        <h2 class="visually-hidden">Сообщение о неудачной попытке отправки формы</h2>
+        <div class="modal__wrapper modal__wrapper--fail">
+          <h3 class="modal__title modal__title--fail">Что-то пошло не так!</h3>
+          <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+          <button class="modal__button" type="button">Ок</button>
+        </div>
+      </section>
+
+      <section class="modal modal--success">
+        <h2 class="visually-hidden">Сообщение об успешной отправке формы</h2>
+        <div class="modal__wrapper modal__wrapper--success">
+          <h3 class="modal__title modal__title--success">Ваш отзыв отправлен!</h3>
+          <p class="modal__text modal__text--success">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        </div>
+        <div class="modal-button__wrapper">
+          <button class="modal__button modal__button--success" type="button">Закрыть окно</button>
+        </div>
       </section>
     </main>
 
@@ -190,5 +210,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/nav.min.js"></script>
+    <script src="js/modal.min.js"></script>
   </body>
 </html>

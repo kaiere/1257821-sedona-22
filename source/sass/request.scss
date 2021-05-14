@@ -1,5 +1,5 @@
 .request__wrapper {
-  padding: 36px 8px 16px;
+  padding: 36px 8px 0;
 }
 
 .request__header {
@@ -20,6 +20,32 @@
   font-size: 14px;
   line-height: 24px;
   text-transform: uppercase;
-  margin: 0;
   text-align: center;
+  margin: 28px 0 0;
+}
+
+@media (max-width: $mobile-width-only) {
+  .request__text br {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .request__wrapper {
+    padding: 62px 8px 0;
+  }
+
+  .request__header {
+    font-size: 30px;
+  }
+
+  .request__text {
+    margin-top: 33px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .request__wrapper {
+    padding: 113px 8px 0;
+  }
 }

@@ -18,7 +18,7 @@
 }
 
 .first-reason__wrapper {
-  padding: 75px 12px 39px;
+  padding: 70px 12px 39px;
 }
 
 .first-reason__header {
@@ -38,21 +38,27 @@
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 26px;
+  line-height: 21px;
   text-transform: uppercase;
-  margin: 0;
+  margin: 14px 0 0;
   text-align: center;
 }
 
 .first-reason__image {
   background-image: url("../img/photo-city-1.jpg");
   background-repeat: no-repeat;
-  min-height: 256px;
+  height: 260px;
   background-size: cover;
   background-position: 50%;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/photo-city-1X2.jpg");
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .first-reason__header br {
+    display: none;
   }
 }
 
@@ -68,10 +74,26 @@
     }
   }
 
+  .first-reason__header {
+    font-size: 21px;
+  }
+
+  .first-reason__text {
+    margin: 22px 20px 0;
+  }
+
+  .first-reason__text br {
+    display: none;
+  }
+
   .first-reason__wrapper {
     width: 256px;
-    margin: auto;
+    margin: 40px auto;
     padding: 0;
+  }
+
+  .first-reason__image {
+    height: 256px;
   }
 }
 
@@ -82,6 +104,10 @@
 
   .first-reason__wrapper {
     width: 400px;
-    margin: auto;
+    margin-top: 47px;
+  }
+
+  .first-reason__text {
+    margin: 22px 56px 0;
   }
 }
