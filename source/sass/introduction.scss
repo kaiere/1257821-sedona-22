@@ -1,34 +1,33 @@
 .introduction__wrapper {
-  padding: 58px 18px 28px;
+  padding: 32px 18px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 46px 18px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 58px 18px 28px;
+  }
 }
 
 .introduction {
   position: relative;
-  // height: 220px;
-
-  // &::after {
-  //   position: absolute;
-  //   content: "";
-  //   left: 50%;
-  //   transform: translateX(-50%);
-  //   bottom: -36px;
-  //   width: 100%;
-  //   height: 37px;
-  //   background-image: url("../img/small-triangle.svg");
-  //   background-repeat: no-repeat;
-  //   background-position-x: center;
-  // }
 }
 
 .introduction__header {
   font-family: "PT Sans Bold", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 21px;
+  font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 10px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+    margin: 0;
+  }
 }
 
 .introduction__text {

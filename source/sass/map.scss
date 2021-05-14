@@ -1,8 +1,25 @@
 .map__image {
+  position: relative;
   background-image: url("../img/map-desktop.jpg");
   background-repeat: no-repeat;
-  min-height: 350px;
+  height: 350px;
   background-position: 50%;
+}
+
+.map__image::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 17px;
+  height: 17px;
+  background: $basic-blue;
+  border: 5px solid $basic-white;
+  border-radius: 50%;
+}
+
+.map__google {
+  width: 100%;
 }
 
 @media (min-width: $tablet-width) {

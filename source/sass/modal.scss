@@ -1,0 +1,127 @@
+.modal {
+  display: none;
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $basic-black;
+  z-index: 2;
+  text-align: center;
+  box-shadow: 0 7px 15px $modal-shadow;
+  text-transform: uppercase;
+  background: $basic-white;
+}
+
+.modal--show {
+  display: block;
+}
+
+.modal--fail {
+  padding: 40px 0 37px;
+}
+
+.modal__wrapper {
+  max-width: 235px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.modal__wrapper--success {
+  padding: 30px 0 26px;
+}
+
+.modal-button__wrapper {
+  background-color: $form-light-grey;
+  padding: 20px 0;
+}
+
+.modal__title {
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0 auto 25px;
+  text-transform: uppercase;
+}
+
+.modal__text {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0 0 22px;
+  text-transform: uppercase;
+}
+
+.modal__button {
+  min-width: 180px;
+  color: $basic-white;
+  font-size: 21px;
+  line-height: 26px;
+  display: block;
+  padding: 16px 0;
+  text-transform: uppercase;
+  text-align: center;
+  background: #81b3d2;
+  text-decoration: none;
+  border: 0;
+  margin: 0 auto;
+  font-weight: 700;
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  cursor: pointer;
+}
+
+.modal__button--success {
+  width: 280px;
+}
+
+@media (min-width: $tablet-width) {
+  .modal__wrapper {
+    max-width: 280px;
+  }
+
+  .modal__wrapper--success {
+    max-width: 415px;
+    padding: 46px 0 0;
+  }
+
+  .modal--success {
+    min-width: 600px;
+  }
+
+  .modal--fail {
+    min-width: 400px;
+    padding: 50px 0 49px;
+  }
+
+  .modal__title {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0 15px 27px;
+  }
+
+  .modal__text {
+    margin: 0 0 35px;
+  }
+
+  .modal__text--success {
+    margin: 0 0 40px;
+  }
+
+  .modal-button__wrapper {
+    padding: 44px 0;
+  }
+
+  .modal__button {
+    width: 272px;
+  }
+
+  .modal__button--success {
+    width: 458px;
+  }
+}
