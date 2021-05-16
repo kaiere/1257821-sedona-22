@@ -36,6 +36,7 @@
   height: 260px;
   background-size: cover;
   background-position: 50%;
+  background-color: $basic-light-grey;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/photo-bridge-1X2.jpg");
@@ -67,6 +68,7 @@
     grid-column: 1;
     grid-row: 1;
     height: 256px;
+    background-position: inherit;
   }
 
   .second-reason__wrapper {
