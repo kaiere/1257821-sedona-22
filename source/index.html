@@ -4,15 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin>
     <link href="css/style.min.css" rel="stylesheet">
   </head>
-  <body class="page__body">
+  <body class="body">
     <header class="page-header">
       <a class="page-header__logo">
         <picture>
           <source media="(min-width: 1200px)" srcset="img/logotype-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logotype-tablet.svg">
-          <img class="page-header__logo--img" src="img/logotype-mobile.svg" width="102" height="84" alt="Седона">
+          <img class="page-header__logo-img" src="img/logotype-mobile.svg" width="102" height="84" alt="Седона">
         </picture>
       </a>
         <nav class="main-nav main-nav--opened">
@@ -29,7 +31,7 @@
                 <a class="main-nav__link" href="form.html">Форма отзыва</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link" href="#">HTML Academy</a>
+                <a class="main-nav__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a>
               </li>
             </ul>
           </div>
@@ -103,7 +105,7 @@
             <p class="last-reasons__number">— №3 —</p>
             <p class="last-reasons__text">Все интересные места<br> находятся очень близко</p>
           </li>
-          <li class="last-reasons__item--small">
+          <li class="last-reasons__item last-reasons__item--small">
             <h3 class="last-reasons__header">Красивая<br> дорога</h3>
             <p class="last-reasons__number">— №4 —</p>
             <p class="last-reasons__text">Ехать в седону из<br> Лас-Вегаса совсем не скучно!</p>
@@ -119,10 +121,10 @@
 
       <section class="hotel-search">
         <div class="hotel-search__wrapper">
-          <h2 class="hotels-search__header">Заинтересовались?</h2>
-          <p class="hotels-search__text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <h2 class="hotel-search__header">Заинтересовались?</h2>
+          <p class="hotel-search__text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         </div>
-        <div class="button__wrapper">
+        <div class="hotel-search__button-wrapper">
           <a class="hotel-search__button" target="_blank" href="#">Найти гостиницу</a>
         </div>
       </section>
@@ -143,32 +145,32 @@
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link" href="">
-                <svg class="social__link--icon" role="img" width="17" height="17" xmlns="http://www.w3.org/2000/svg">
+              <a class="social__link" href="" aria-label="Твиттер">
+                <svg class="social__link-icon" role="img" width="17" height="17" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="img/svg-sprite.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="">
-                <svg class="social__link--icon" role="img" width="12" height="22" xmlns="http://www.w3.org/2000/svg">
+              <a class="social__link" href="" aria-label="Фейсбук">
+                <svg class="social__link-icon" role="img" width="12" height="22" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="img/svg-sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="">
-                <svg class="social__link--icon" role="img" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
+              <a class="social__link" href="" aria-label="Ютуб">
+                <svg class="social__link-icon" role="img" width="20" height="16" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="img/svg-sprite.svg#icon-youtube"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
-        <div class="page-footer__copyright">
+        <div class="page-footer__copyright copyright">
           <p class="copyright__text">Разработано</p>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <svg class="copyright__link--icon" role="img" width="27" height="35" xmlns="http://www.w3.org/2000/svg">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" aria-label="Логотип HTML Academy">
+            <svg class="copyright__link-icon" role="img" width="27" height="35" xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="img/svg-sprite.svg#icon-copyright"></use>
             </svg>
           </a>

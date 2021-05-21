@@ -6,9 +6,13 @@
 
 // General blocks
 
+@import "../sass/body.scss";
 @import "../sass/page-header.scss";
+@import "../sass/main-nav.scss";
 @import "../sass/welcome.scss";
 @import "../sass/footer.scss";
+@import "../sass/social.scss";
+@import "../sass/copyright.scss";
 
 // Blocks (index)
 
@@ -23,7 +27,8 @@
 // Blocks (form)
 
 @import "../sass/request.scss";
-@import "../sass/review.scss";
+@import "../sass/form.scss";
+@import "../sass/field.scss";
 @import "../sass/modal.scss";
 
 // Blocks (catalog)

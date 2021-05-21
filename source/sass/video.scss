@@ -89,16 +89,16 @@
   margin-right: 30px;
 }
 
-.video__button--icon {
+.video__button-icon {
   fill: $play-icon-grey;
 }
 
-.video__button:hover .video__button--icon,
-.video__button:focus .video__button--icon {
+.video__button:hover .video__button-icon,
+.video__button:focus .video__button-icon {
   fill: $dark-grey;
 }
 
-.video__button:active .video__button--icon {
+.video__button:active .video__button-icon {
   fill: $dark-grey;
   opacity: 0.3;
 }
@@ -166,7 +166,7 @@
     max-width: 400px;
   }
 
-  .video__button--icon {
+  .video__button-icon {
     fill: $basic-white;
   }
 
@@ -179,13 +179,13 @@
     left: -6px;
   }
 
-  .video__button:hover .video__button--icon,
-  .video__button:focus .video__button--icon {
+  .video__button:hover .video__button-icon,
+  .video__button:focus .video__button-icon {
     fill: $basic-white;
     opacity: 0.6;
   }
 
-  .video__button:active .video__button--icon {
+  .video__button:active .video__button-icon {
     fill: $basic-white;
     opacity: 0.3;
   }
@@ -198,11 +198,11 @@
 
 @media (min-width: $desktop-width) {
   .video__wrapper {
-    padding-top: 5px;
+    padding-top: 9px;
   }
 
   .video__container {
-    margin-top: 84px;
+    margin-top: 80px;
   }
 
   .video__interface {

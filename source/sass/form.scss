@@ -1,0 +1,260 @@
+.form__legend {
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.form__group {
+  border-top: 1px #e5e5e5 solid;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.form__group--wide {
+  margin-top: 25px;
+}
+
+.form__group--first {
+  margin-top: 25px;
+}
+
+.form__wrapper {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.form__label {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.form__submit {
+  margin: 48px 20px 37px;
+}
+
+.form__button {
+  cursor: pointer;
+  width: 280px;
+  margin: 0;
+  padding: 16px 15px 13px;
+  background-color: $basic-blue;
+  font-family: "PT Sans Bold", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  color: $basic-white;
+  text-transform: uppercase;
+  border-color: transparent;
+
+  &:hover,
+  &:focus {
+    background-color: $button-hover-blue;
+  }
+
+  &:active {
+    background-color: $button-down-blue;
+    color: $transparent-white;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .form__required-fields {
+    display: none;
+  }
+
+  .form__submit {
+    text-align: center;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .form__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 648px;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+
+  .form__group {
+    border: none;
+    padding: 0;
+    margin-top: 48px;
+  }
+
+  .form__group--first {
+    order: -1;
+    position: relative;
+    margin-bottom: 23px;
+
+    .form__legend {
+      text-align: left;
+    }
+  }
+
+  .form__group--first::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 292px;
+    background-color: $form-stroke;
+    top: 0;
+    right: 0;
+  }
+
+  .form__group--second {
+    max-width: 266px;
+    margin-left: auto;
+
+    .form__legend {
+      text-align: left;
+    }
+
+    .form__wrapper {
+      max-width: 266px;
+      margin: 0;
+      margin-bottom: 23px;
+    }
+  }
+
+  .form__group--wide {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .form__legend {
+    font-size: 21px;
+    position: relative;
+    margin-bottom: 55px;
+  }
+
+  .form__legend--stroke {
+    padding: 0 150px;
+  }
+
+  .form__legend--stroke::before {
+    content: "";
+    position: absolute;
+    width: 124px;
+    height: 1px;
+    background-color: $form-desktop-grey;
+    top: 50%;
+    left: 0;
+  }
+
+  .form__legend--stroke::after {
+    content: "";
+    position: absolute;
+    width: 124px;
+    height: 1px;
+    background-color: $form-desktop-grey;
+    top: 50%;
+    right: 0;
+  }
+
+  .form__wrapper {
+    max-width: initial;
+  }
+
+  .form__wrapper--column {
+    position: relative;
+    top: -34px;
+    margin-bottom: -31px;
+  }
+
+  .form__wrapper--table {
+    padding-left: 95px;
+    padding-right: 93px;
+    padding-bottom: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 55px;
+    row-gap: 30px;
+    position: relative;
+    top: -10px;
+  }
+
+  .form__label {
+    padding: 0;
+  }
+
+  .form__submit {
+    margin: 58px auto 60px;
+    max-width: 648px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .form__button {
+    width: 324px;
+  }
+
+  .form__required-fields {
+    text-transform: uppercase;
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form__container {
+    max-width: 960px;
+    margin-top: 11px;
+  }
+
+  .form__group--first {
+    .form__legend {
+      margin-left: 80px;
+    }
+  }
+
+  .form__group--second {
+    max-width: 400px;
+    width: 100%;
+
+    .form__wrapper {
+      max-width: 400px;
+    }
+  }
+
+  .form__wrapper--column {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 80px;
+    row-gap: 20px;
+    justify-items: end;
+    top: 17px;
+    margin-bottom: 20px;
+  }
+
+  .form__wrapper--table {
+    padding: 0;
+    padding-bottom: 8px;
+    grid-template-columns: repeat(4, max-content);
+    column-gap: 50px;
+  }
+
+  .form__legend--stroke {
+    padding: 0 300px;
+  }
+
+  .form__legend--stroke::before,
+  .form__legend--stroke::after {
+    width: 280px;
+  }
+
+  .form__submit {
+    max-width: 960px;
+    margin-bottom: 65px;
+  }
+
+  .form__button {
+    width: 480px;
+  }
+}
