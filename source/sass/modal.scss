@@ -36,6 +36,8 @@
 .modal__button-wrapper {
   background-color: $form-light-grey;
   padding: 20px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .modal__title {
@@ -60,20 +62,7 @@
 
 .modal__button {
   min-width: 180px;
-  color: $basic-white;
-  font-size: 21px;
-  line-height: 26px;
   display: block;
-  padding: 16px 0;
-  text-transform: uppercase;
-  text-align: center;
-  background: #81b3d2;
-  text-decoration: none;
-  border: 0;
-  margin: 0 auto;
-  font-weight: 700;
-  font-family: "PT Sans Bold", "Arial", sans-serif;
-  cursor: pointer;
 }
 
 .modal__button--success {

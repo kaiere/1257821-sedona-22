@@ -31,35 +31,8 @@
 }
 
 .hotel-search__button {
-  cursor: pointer;
   width: 280px;
-  background-color: $basic-blue;
-  font-family: "PT Sans Bold", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 26px;
-  color: $basic-white;
-  text-transform: uppercase;
-  border-color: transparent;
-  text-align: center;
   margin: 28px 20px;
-  padding: 16px 0;
-
-  &:hover,
-  &:focus {
-    background-color: $button-hover-blue;
-  }
-
-  &:active {
-    background-color: $button-down-blue;
-    color: $transparent-white;
-  }
-
-  &:disabled {
-    background-color: $grey-border;
-    color: $basic-white;
-  }
 }
 
 @media (max-width: $mobile-width-only) {
